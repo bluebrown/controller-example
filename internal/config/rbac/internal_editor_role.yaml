@@ -1,0 +1,31 @@
+# permissions for end users to edit internals.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: internal-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: internal
+    app.kubernetes.io/part-of: internal
+    app.kubernetes.io/managed-by: kustomize
+  name: internal-editor-role
+rules:
+- apiGroups:
+  - demo.example.io
+  resources:
+  - internals
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - demo.example.io
+  resources:
+  - internals/status
+  verbs:
+  - get

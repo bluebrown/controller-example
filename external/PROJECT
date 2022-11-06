@@ -1,0 +1,16 @@
+domain: example.io
+layout:
+- go.kubebuilder.io/v4-alpha
+projectName: external
+repo: example.io/other
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.io
+  group: other
+  kind: External
+  path: example.io/other/api/v2
+  version: v2
+version: "3"

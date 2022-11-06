@@ -1,0 +1,12 @@
+apiVersion: other.example.io/v2
+kind: External
+metadata:
+  labels:
+    app.kubernetes.io/name: external
+    app.kubernetes.io/instance: external-sample
+    app.kubernetes.io/part-of: external
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: external
+  name: external-sample
+spec:
+  # TODO(user): Add fields here

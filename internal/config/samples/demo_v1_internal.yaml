@@ -1,0 +1,12 @@
+apiVersion: demo.example.io/v1
+kind: Internal
+metadata:
+  labels:
+    app.kubernetes.io/name: internal
+    app.kubernetes.io/instance: internal-sample
+    app.kubernetes.io/part-of: internal
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: internal
+  name: internal-sample
+spec:
+  # TODO(user): Add fields here
